@@ -12,7 +12,7 @@ class AccessAttempt(models.Model):
     ip_address = models.IPAddressField('IP Address')
     get_data = models.TextField('GET Data')
     post_data = models.TextField('POST Data')
-    http_accept = models.CharField('HTTP Accept', max_length=255)
+    http_accept = models.CharField('HTTP Accept', max_length=1024)
     path_info = models.CharField('Path', max_length=255)
     failures_since_start = models.PositiveIntegerField(FAILURES_DESC)
     attempt_time = models.DateTimeField(auto_now_add=True)
